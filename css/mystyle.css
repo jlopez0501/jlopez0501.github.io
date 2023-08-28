@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* CSS for the left box */
+.left-box {
+    flex: 1 0 400px; /* Constrict the width to 300px and allow shrinking */
+    max-width: 400px; /* Set a maximum width to avoid excessive shrinking */
+    margin-right: 80px;
+}
+
+/* CSS for the middle box */
+.middle-box {
+    flex: 0 0 200px; /* Set a fixed width for the middle box */
+    margin: 0 20px; /* Add some margin to separate it from other boxes */
+}
+
+/* CSS for the right box */
+.right-box {
+    flex: 1 0 400px; /* Constrict the width to 300px and allow shrinking */
+    max-width: 400px; /* Set a maximum width to avoid excessive shrinking */
+    margin-left: 80px;
+}
