@@ -14,6 +14,12 @@
     margin-right: 80px;
 }
 
+.left-box-wide {
+    flex: 1 0 400px; /* Constrict the width to 300px and allow shrinking */
+    max-width: 900px; /* Set a maximum width to avoid excessive shrinking */
+    margin-right: 80px;
+}
+
 /* CSS for the middle box */
 .middle-box {
     flex: 0 0 200px; /* Set a fixed width for the middle box */
@@ -34,7 +40,11 @@
     border-radius: 50%;
 }
 
-.w3-animate-bottom-slow.w3-animate-bottom{
+.w3-animate-bottom-slow.w3-animate-bottom {
     animation-duration: 1.5s;
     animation-name: animatebottom
+}
+
+.navbar-offwhite {
+    background-color:#efece7
 }
