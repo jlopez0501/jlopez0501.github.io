@@ -1,0 +1,24 @@
+:root {
+  /* Custom colors */
+  --dusk-blue: #26547cff;
+  --bubblegum-pink: #ef476fff;
+  --golden-pollen: #ffd166ff;
+  --emerald: #06d6a0ff;
+  --porcelain: #fffcf9ff;
+
+  /* National Park Colors */
+  --color-1: #da7424;
+  --color-2: #ecb68d;
+  --color-3: #243f58;
+  --color-4: #8c6444;
+  --color-5: #afbcac;
+  --color-6: #364f64;
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  background-color: var(--emerald);
+  border-radius: 50%;
+  display: inline-block;
+}

@@ -1,67 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <title>Joshua Lopez</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<title>Joshua's Website</title>
+    <link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+    <h1>Hello!</h1>
+    <p style="color: var(--dusk-blue);">
+      My name is Joshua Lopez and this is my website. I'm firmly against AI so if my website looks bad, that's why. I'm a recent graduate with my bachelors degree in computer science, I love music, and I love nature.
+      </br> Hopefully, I'll think of more interesting information to add here soon, but in the meantime, enjoy some pictures of Olympic National Park.
+    </p>
+    <div class="circle"></div>
+    <div id="test">
+      <script>
+        for(var i = 0; i < 9; i++) {
+          var circle = document.createElement('div');
+          circle.className = "circle";
 
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="/css/mystyle.css">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-    <!-- W3 CSS -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
-  <body>
-    <!-- Grey with black text -->
-    <nav class="navbar navbar-expand-sm bg-light navbar-light">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://www.linkedin.com/in/jlopez20" target="_blank" rel="noreferrer noopener">LinkedIn</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://github.com/1ValidUser" target="_blank" rel="noreferrer noopener">Github</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" target="_blank" rel="noreferrer noopener">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/files/Joshua Lopez - Resume.pdf" target="_blank" rel="noreferrer noopener">Résumé</a>
-            </li>
-        </ul>
-    </nav>
-    <!-- Main Body Portion -->
-    <div class="flex-container">
-        <div class="left-box mx-auto w3-margin-bottom w3-animate-bottom-slow w3-animate-bottom">
-            <h1 style="text-align: center;">Persuing a bachelors in Computer Science from <br>Kent State University</h1>
-        </div>
-        <div class="middle-box">
-            <!-- Profile Card-->
-            <div class="w3-card-4" style="width: 200px; height: 300px;">
-                <img src="/images/avatar (2).jpg" style="width: 100%;" alt="photo of myself">
-                <div class="w3-container w3-center">
-                    <p class="w3-xlarge" style="padding-top: 5%;">Joshua Lopez</p>
-                    <p>Web/Software Developer</p>
-                </div>
-            </div>
-        </div>
-        <div class="right-box mx-auto w3-margin-top w3-animate-bottom-slow w3-animate-bottom">
-            <h1 style="text-align: center;">Contact me at jlopez20@kent.edu</h1>
-        </div>
+          document.getElementById('test').appendChild(circle);
+        }
+      </script>
     </div>
-    <hr style="width: 75%; margin:auto; margin-top:1in; border-color: darkgray;">
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://www.w3schools.com/lib/w3.js"></script>
   </body>
+  <footer>
+    <p>Nothing</p>
+  </footer>
+	
 </html>
