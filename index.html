@@ -2,28 +2,98 @@
 <html lang="en">
 	<head>
 		<title>Joshua's Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 	</head>
-	<body>
-    <h1>Hello!</h1>
-    <p style="color: var(--dusk-blue);">
-      My name is Joshua Lopez and this is my website. I'm firmly against AI so if my website looks bad, that's why. I'm a recent graduate with my bachelors degree in computer science, I love music, and I love nature.
-      </br> Hopefully, I'll think of more interesting information to add here soon, but in the meantime, enjoy some pictures of Olympic National Park.
-    </p>
-    <div class="circle"></div>
-    <div id="test">
-      <script>
-        for(var i = 0; i < 9; i++) {
-          var circle = document.createElement('div');
-          circle.className = "circle";
-
-          document.getElementById('test').appendChild(circle);
-        }
-      </script>
+	<body style="background-color: lightgray;">
+    <div style="position:fixed; margin-left: 10px; top:0; left:0; width:110px; height:100vh; border-radius:40px; overflow:hidden;">
+      <canvas id="w1" width="110"></canvas>
     </div>
+
+    <div style="position:fixed; top:0; right:0; width:110px; height:100vh; border-radius:40px; overflow:hidden;">
+      <canvas id="w2" width="110"></canvas>
+    </div>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <model-viewer id="mv" src="models/pimbo.glb" camera-controls auto-rotate style="width:100%;height:100vh;">
+
+    <script>
+      document.getElementById('mv').addEventListener('click', e => {
+        const hit = e.target.positionAndNormalFromPoint(e.clientX, e.clientY);
+        if (hit) console.log('position:', hit.position, 'normal:', hit.normal);
+      });
+    </script>
+
+
+
+    <!-- <button slot="hotspot-1"
+      data-position="-0.00854166356130443 0.013595855175048504 0.009435054572872083"
+      data-normal="-0.9073016608660068 0.188398106822844 0.3759120236642532"
+      style="background:#ced62d; border:none; border-radius:50%; width:20px; height:20px; cursor:pointer;"
+      onclick="window.location='https://github.com/jlopez0501'">
+    </button> -->
+
+    <a slot="hotspot-1"
+      data-position="-0.00854166356130443 0.013595855175048504 0.009435054572872083"
+      data-normal="-0.9073016608660068 0.188398106822844 0.3759120236642532"
+      href="https://github.com/jlopez0501"
+      style="
+        /* background: rgba(0,0,0,0.7); */
+        color: rgb(44, 154, 191);
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 50px;
+        text-decoration: none;
+        white-space: nowrap;
+      ">
+      Github
+    </a>
+
+  </model-viewer>
+
+    <script>
+      function makeWorm(id, offset) {
+        const c = document.getElementById(id).getContext('2d');
+        const W = 80;
+        let p = 0;
+
+        (function draw() {
+          const H = innerHeight;
+          c.canvas.height = H;
+          c.clearRect(0, 0, W, H);
+          c.strokeStyle = '#378ADD';
+          c.lineWidth = 35;
+          c.beginPath();
+          for (let y = 0; y <= H; y++) {
+            const x = 55 + 25 * Math.sin((y / H) * Math.PI * 3 - p);
+            y ? c.lineTo(x, y) : c.moveTo(x, y);
+          }
+          c.stroke();
+
+          // eyes follow the wave
+          const eyeY1 = 18;
+          const eyeY2 = 30;
+          const eyeX1 = 55 + 25 * Math.sin((eyeY1 / H) * Math.PI * 3 - p);
+          const eyeX2 = 55 + 25 * Math.sin((eyeY2 / H) * Math.PI * 3 - p);
+
+          c.fillStyle = '#000';
+          c.beginPath(); c.arc(eyeX1 - 6, eyeY1, 4, 0, Math.PI * 2); c.fill();
+          c.beginPath(); c.arc(eyeX1 + 6, eyeY1, 4, 0, Math.PI * 2); c.fill();
+
+          p += 0.04;
+          requestAnimationFrame(draw);
+        })();
+      }
+
+    makeWorm('w1', 0);
+    makeWorm('w2', Math.PI);
+  </script>
+
+
+
+    
   </body>
   <footer>
-    <p>Nothing</p>
   </footer>
 	
 </html>
